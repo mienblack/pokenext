@@ -1,3 +1,5 @@
+import styles from "@/styles/Layout.module.css"
+
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 
@@ -10,7 +12,7 @@ export default function Layout({ children }) {
                 <title>PokeNext</title>
             </Head>
             <Navbar />
-            <main>{children}</main>
+            <main className={styles.mainContainer}>{children}</main>
             <Footer />
         </>
     )

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import styles from "../../styles/Footer.module.css";
 
@@ -23,7 +23,7 @@ function Footer() {
             <div className={styles.ref}>
                 <p>Made with 💟 by Damien Costa ✌🏿</p>
                 <p>
-                    <span className={styles.refSpan}>Costs</span> &copy; 2022
+                    <span className={styles.refSpan}>POKENEXT</span> &copy; 2023
                 </p>
             </div>
         </footer>
