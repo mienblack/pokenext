@@ -6,7 +6,7 @@ export default function Sobre() {
     return (
         <div className={styles.about}>
             <h1>Sobre o projeto</h1>
-            <p>Este Projeto</p>
+            <p>Este projeto tem como finalidade criar uma pokedex utilizando a ferramenta Next.js.</p>
             <Image
                 src="/images/pikachu.png"
                 width={400}
