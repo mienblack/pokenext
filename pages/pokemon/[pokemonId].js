@@ -1,6 +1,7 @@
 import styles from '@/styles/Pokemon.module.css'
 
 import Image from "next/image"
+import { useRouter } from 'next/router'
 
 export const getStaticPaths = async () => {
     const maxPokemon = 151
@@ -17,7 +18,7 @@ export const getStaticPaths = async () => {
 
     return {
         paths,
-        fallback: false
+        fallback: true
     }
 }
 
@@ -33,7 +34,13 @@ export const getStaticProps = async (context) => {
 }
 
 export default function Pokemon({ pokemon }) {
-    console.log(pokemon.types)
+    const router = useRouter()
+    if (router.isFallback) {
+        return (
+            <div>Carregando...</div>
+        )
+    }
+
     let pokeIndex = ""
 
     if (pokemon.id < 10) {
